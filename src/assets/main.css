@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #EEF3FF;
+}
+
+textarea {
+    resize: none;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+form input:focus ~ label > :not(#submit),
+form textarea:focus ~ label > :not(#submit),
+form input:not(:placeholder-shown) ~ label > :not(#submit),
+form textarea:not(:placeholder-shown) ~ label > :not(#submit) {
+    display: none;
+}
